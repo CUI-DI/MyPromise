@@ -1,6 +1,4 @@
-// 改进promise调用then的时，pending状态的处理
-// 采用发布订阅模式： 如果当前状态是pending时， 需要将成功的回调和失败的回调存放起来，稍后调用resolve和reject时重新执行
-
+// 开始支持promise 链式调用
 const RESOLVED = "RESOLVED"; // 成功
 const REJECTED = "REJECTED"; // 失败
 const PENDING = "PENDING"; // 等待态
