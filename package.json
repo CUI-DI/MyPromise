@@ -1,0 +1,21 @@
+{
+  "name": "mypromise",
+  "version": "1.0.0",
+  "description": "Implementing Promises In JavaScript (Promise A+ spec)",
+  "scripts": {
+    "test": "npx promises-aplus-tests promise.v5.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CUI-DI/MyPromise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CUI-DI/MyPromise/issues"
+  },
+  "homepage": "https://github.com/CUI-DI/MyPromise#readme",
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  }
+}
