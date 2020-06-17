@@ -1,4 +1,3 @@
-let fs = require("fs");
 let Promise = require("./promise.v3");
 
 // p1.resolve => p1.then.onFulfilled => (p2.resolve 隐藏在then的实现里)  => p2.then.onFulfilled

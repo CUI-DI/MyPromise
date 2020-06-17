@@ -1,23 +1,15 @@
-let fs = require("fs");
+let Promise = require("./promise.v4");
 
-function read(filename) {
+let p1 = new Promise((resolve, reject) => {
+  resolve("p1 resolved data");
+});
+
+let p2 = p1.then((data) => {
   return new Promise((resolve, reject) => {
-    fs.readFile(filename, "utf8", (err, data) => {
-      if (err) reject(err);
-      resolve(data);
-    });
+    resolve("p1 onFulfilled");
   });
-}
+});
 
-read("./name.txt")
-  .then((data) => {
-    return read(data);
-  })
-  .then(
-    (data) => {
-      console.log("-----success-----", data);
-    },
-    (err) => {
-      console.log("-----error-----", err + "错误");
-    }
-  );
+p2.then((data) => {
+  console.log(data, "=> p2 onFulfilled");
+});
